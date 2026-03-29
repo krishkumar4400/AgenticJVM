@@ -1,4 +1,4 @@
-# ☕ Java Engineering Journey
+# Java Engineering Journey
 
 This repository documents my structured journey of learning and mastering Java from fundamentals to production-level backend systems.
 
@@ -7,7 +7,7 @@ but understanding JVM, OOP design, concurrency, and scalable backend development
 
 ---
 
-## 📌 What This Repository Covers
+## What This Repository Covers
 
 - Core Java fundamentals
 - Object-Oriented Programming principles
@@ -19,7 +19,7 @@ but understanding JVM, OOP design, concurrency, and scalable backend development
 
 ---
 
-## 🛠 Tech Stack
+## Tech Stack
 
 - Java
 - Maven / Gradle
@@ -30,7 +30,7 @@ but understanding JVM, OOP design, concurrency, and scalable backend development
 
 ---
 
-## 📂 Structure
+## Structure
 
 - Basics & syntax
 - OOP deep dive
@@ -40,7 +40,7 @@ but understanding JVM, OOP design, concurrency, and scalable backend development
 
 ---
 
-## 🎯 Goal
+## Goal
 
 To build scalable backend systems and understand enterprise-level Java architecture.
 
