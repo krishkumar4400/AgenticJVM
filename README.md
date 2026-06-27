@@ -25,8 +25,6 @@
 
 Most "agentic AI" content online lives in Python. This repo is the opposite bet: **everything here is built on Java** — the language most enterprise systems actually run on — using the frameworks now bringing agentic AI into that world: **Spring AI, Google's Agent Development Kit (ADK), LangChain4j, and the Model Context Protocol (MCP)**.
 
-This is not a notes dump. Every module ships runnable code, every concept has a corresponding implementation, and every block ends in something deployable.
-
 > **Why public?** Because the best way to prove you understand a stack this new is to build in the open and let the commit history, issues, and shipped agents speak for themselves.
 
 ---
@@ -173,7 +171,7 @@ MIT — see [LICENSE](./LICENSE). Use it, fork it, learn from it.
 
 <div align="center">
 
-**Built by [Your Name]** · [LinkedIn](#) · [Portfolio](#)
+**Built by krish kumar** · [LinkedIn](#) · [Portfolio](#)
 
 *If this helped you learn agentic AI on the JVM, a ⭐ helps others find it too.*
 
