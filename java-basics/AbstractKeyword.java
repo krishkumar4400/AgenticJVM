@@ -102,7 +102,7 @@ abstract class WagonR extends Car {
         System.out.println("Driving...");
     }
 
-    public void fly();
+    public void fly(){}
 }
 
 class UpdatedWagonR extends WagonR { // concrete class.

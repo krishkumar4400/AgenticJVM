@@ -50,10 +50,10 @@
 ## How java works
 
 ---
-![alt text](./screenshots/image.png)
+![alt text](./screenshots/image1.png)
 ---
 
-![alt text](./screenshots/image1.png)
+![alt text](./screenshots/image2.png)
 
 ---
 
@@ -909,6 +909,8 @@ public void greet() {
 │  └────────┘ │            └──────────────────────────┘
 └─────────────┘
 ```
+---
+![alt text](./screenshots/image3.png)
 
 ---
 
@@ -1174,6 +1176,9 @@ s = s + " World"; // Does NOT modify "Hello"
                    // 's' now points to the new String
                    // "Hello" is now orphaned (eligible for GC)
 ```
+---
+![alt text](./screenshots/image4.png)
+---
 
 **Dry Run:**
 

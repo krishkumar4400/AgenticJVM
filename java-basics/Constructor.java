@@ -7,8 +7,8 @@ class Human {
         age = 11;
     }
     // public Human(String n, int a) {
-    //     name = n;
-    //     age = a;
+    // name = n;
+    // age = a;
     // }
 
     public Human(String name, int age) {
@@ -16,12 +16,11 @@ class Human {
         this.name = name;
         this.age = age;
     }
+
     public Human(String name) {
         System.out.println("In Constructor");
         this.name = name;
     }
-
-
 
     public String getName() {
         return name;
@@ -32,8 +31,6 @@ class Human {
     }
 
 }
-
-
 
 public class Constructor {
     public static void main(String[] args) {
@@ -47,7 +44,7 @@ public class Constructor {
         Human h1 = new Human();
         System.out.println(h1.getAge());
         System.out.println(h1.getName());
-        
+
         Human h2 = new Human("this name", 23);
         System.out.println(h2.getAge());
         System.out.println(h2.getName());
@@ -55,7 +52,5 @@ public class Constructor {
         Human h3 = new Human("Pathak");
         System.out.println(h3.getAge());
 
-
     }
 }
-
