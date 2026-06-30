@@ -47,6 +47,16 @@
 
 # 1. Java Basics — Expressions, Literals & Operators
 
+## How java works
+
+---
+![alt text](./screenshots/image.png)
+---
+
+![alt text](./screenshots/image1.png)
+
+---
+
 ## Introduction
 
 Before writing any Java program, you need to understand the **building blocks** of every statement you write. Every line of code is made up of three fundamental things: **expressions**, **operators**, and **operands (literals/variables)**.
