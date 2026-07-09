@@ -1470,6 +1470,9 @@ public class Main {
 
 ## The `this` Keyword
 
+---
+![alt text](./screenshots/image5.png)
+---
 `this` is a **reference to the current object** — the object that called the current method.
 
 ```java
