@@ -2,11 +2,10 @@ package com.restApi.restApi.Repository;
 
 import com.restApi.restApi.dto.CreateUserDto;
 import com.restApi.restApi.dto.UserDto;
+import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Repository;
 
-import java.util.ArrayList;
-import java.util.List;
-import java.util.UUID;
+import java.util.*;
 
 @Repository
 public class UserRepository {
@@ -49,4 +48,27 @@ public class UserRepository {
         }
         return null;
     }
+
+    public void deleteUser(String id) {
+        Map response = new HashMap<>();
+        users.removeIf(user -> user.getId().equals(id));
+//        response.put("status", 200);
+//        response.put("message", "User has been deleted");
+//        return response;
+    }
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

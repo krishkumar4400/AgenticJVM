@@ -104,3 +104,6 @@ GET/users?age=35
 
 Example with pagination:
 GET/users?page=1&size=10
+
+## Spring Data JPA
+

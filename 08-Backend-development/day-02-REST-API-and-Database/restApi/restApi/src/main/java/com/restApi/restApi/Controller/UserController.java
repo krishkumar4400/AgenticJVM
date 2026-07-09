@@ -7,7 +7,9 @@ import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
+import java.util.HashMap;
 import java.util.List;
+import java.util.Map;
 
 @RestController
 @RequestMapping("/api/users")
@@ -41,4 +43,15 @@ public class UserController {
     public ResponseEntity<UserDto> updateUser(@PathVariable String id, @RequestBody CreateUserDto updateUserDto) {
         return ResponseEntity.status(HttpStatus.OK).body(this.userService.updateUser(id, updateUserDto));
     }
+
+    @DeleteMapping("/{id}")
+    public ResponseEntity<HashMap<String, String>> deleteUser(@PathVariable String id) {
+        this.userService.deleteUser(id);
+        HashMap<String, String> response = new HashMap<>();
+        response.put("status", "success");
+        response.put("message", "User deleted successfully");
+        return ResponseEntity.status(HttpStatus.OK).body(response);
+    }
 }
+
+
