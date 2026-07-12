@@ -1,6 +1,5 @@
 package com.dbConnectivity.dbConnectivity.DTO;
 
-import com.dbConnectivity.dbConnectivity.entities.User;
 import lombok.AllArgsConstructor;
 import lombok.Getter;
 import lombok.Setter;
@@ -14,5 +13,5 @@ public class OrderDto {
     private String productName;
     private double orderPrice;
 
-    private User user;
+    private UserDto user;
 }
