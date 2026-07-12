@@ -1,4 +1,4 @@
 package com.dbConnectivity.dbConnectivity.Controllers;
 
-public class productController {
+public class OrdersController {
 }
