@@ -13,7 +13,7 @@ public class Orders {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long orderId;
     private String productName;
-    private  String orderStatus;
+    private String orderStatus;
     private Double orderPrice;
 
     @ManyToOne(fetch = FetchType.LAZY)
