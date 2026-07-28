@@ -118,7 +118,10 @@ XML configuration problems
 spring early days used heavy XML.
 
 example:
+
+```xml
 <bean id="userService" class="com.app.UserService">
+```
 
 Large projects had:
 1000+ lines of XML.
@@ -313,6 +316,10 @@ If someone learns:
 - service companies
 - startups
 
+## Project Structure
+
+## Loose and Tight Coupling
+
 ## Spring Core Concepts
 
 - Lets try to achive loose coupling
@@ -498,7 +505,12 @@ That's why Spring Boot encourages it.
 
 ---
 
----
+## How Spring chooses which implementation
+
+If multiple implementations exist:
+
+@Repository
+class MySQLDatabase implements Database {}
 
 @Repository
 class PostgreSQLDatabase implements Database{}
@@ -724,7 +736,7 @@ main() -> SpringApplication.run() -> [
 
 ## Final recap
 
-main() -> SpringApplication.run() -> Create Spring Application -> Prepare Environment -> Create ApplicationContext -> Load Autoconfiguration.imports -> Apply conditional filtering -> register configurations -> contaxt.refresh() -> Application Ready
+main() -> SpringApplication.run() -> Create Spring Application -> Prepare Environment -> Create ApplicationContext -> Load Autoconfiguration.imports -> Apply conditional filtering -> register configurations -> context.refresh() -> Application Ready
 
 Spring boot startup is not magic.
 

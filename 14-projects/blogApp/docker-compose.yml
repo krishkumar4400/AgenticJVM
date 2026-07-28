@@ -1,0 +1,20 @@
+name: "blog-app"
+version: "3.8"
+
+services:
+  postgres:
+    image: postgres:17
+    container_name: postgres_container
+    restart: always
+    environment:
+      POSTGRES_USER: blog_app_user
+      POSTGRES_PASSWORD: blogAt123
+      POSTGRES_DB: blog_db
+      TZ: Asia/Kolkata
+    ports:
+      - "5434:5432"
+    volumes:
+      - postgres_data:/var/lib/postgresql/data
+
+volumes:
+  postgres_data:

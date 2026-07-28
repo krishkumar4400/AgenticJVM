@@ -1,12 +1,13 @@
-package com.dbConnectivity.dbConnectivity;
+package com.blogApp;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 @SpringBootApplication
-public class DbConnectivityApplication {
+public class BlogAppApplication {
 
 	public static void main(String[] args) {
-		SpringApplication.run(DbConnectivityApplication.class, args);
+		SpringApplication.run(BlogAppApplication.class, args);
 	}
+
 }

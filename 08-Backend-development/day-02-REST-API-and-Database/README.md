@@ -238,7 +238,7 @@ Switch ORM without changing code
 3. Standard query language
 JPQL
 
-java app -> [jap -> hibernate] -> database
+java app -> [jpa -> hibernate] -> database
 
 - problems with JPA
 
@@ -264,7 +264,7 @@ Solution: Spring Data JPA
 
 ### Why Spring data JPA ?
 
-1. No DAO implementation
+1. No DAO (Data Access Object) implementation
 public interface UserRepository extends JpaRepository<User, Long> {}
 
 2. Auto CRUD
@@ -306,3 +306,7 @@ step 4: spring data jpa
 - solved: boilerplate
 
 [Each layer didn't replace the previous one it fixed the problems of the previous one.]
+
+```sh
+docker run --name postgres-container -e POSTGRES_USER=postgres -e POSTGRES_PASSWORD=pass -e POSTGRES_DB=testdb -p 5432:5432 -d postgres
+```
