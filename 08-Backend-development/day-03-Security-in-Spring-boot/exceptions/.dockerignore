@@ -1,0 +1,35 @@
+# Maven / Gradle build directories
+
+build/
+out/
+
+# IDE-specific files
+.idea/
+*.iml
+*.ipr
+*.iws
+.vscode/
+.project
+.classpath
+.settings/
+
+# OS-specific files
+.DS_Store
+Thumbs.db
+
+# Logs and temp files
+*.log
+*.tmp
+
+# Git and version control
+.git/
+.gitignore
+.gitattributes
+
+# Node / frontend build artifacts (if applicable)
+node_modules/
+dist/
+
+# Environment and secrets
+*.env
+.env.*

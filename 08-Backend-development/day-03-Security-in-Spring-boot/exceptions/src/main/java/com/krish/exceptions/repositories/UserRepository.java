@@ -1,4 +1,8 @@
 package com.krish.exceptions.repositories;
 
-public interface UserRepository {
+import com.krish.exceptions.entities.User;
+import org.springframework.data.jpa.repository.JpaRepository;
+
+public interface UserRepository extends JpaRepository<User, String> {
+
 }

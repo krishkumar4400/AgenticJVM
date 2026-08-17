@@ -1,4 +1,7 @@
 package com.krish.springApp.repositories;
 
-public interface UserRepository {
+import com.krish.springApp.entity.User;
+import org.springframework.data.jpa.repository.JpaRepository;
+
+public interface UserRepository extends JpaRepository<User, String> {
 }

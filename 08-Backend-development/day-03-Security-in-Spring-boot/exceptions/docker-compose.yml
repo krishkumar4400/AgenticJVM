@@ -1,0 +1,37 @@
+version: "3.7"
+name: "spring-app"
+
+services:
+  app:
+    build: .
+    ports:
+      - "8080:8080"
+
+    networks:
+      - spring-network
+
+    depends_on:
+      - postgres
+
+  postgres:
+    image: postgres:17
+    environment:
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: Krish@9661
+      POSTGRES_DB: errorsDB
+      TZ: Asia/Kolkata
+    ports:
+      - "5432:5432"
+
+    networks:
+      - spring-network
+
+    volumes:
+      - spring-app-data:/var/lib/postgresql/data
+
+networks:
+  spring-network:
+    driver: bridge
+
+volumes:
+  spring-app-data:

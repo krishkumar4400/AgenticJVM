@@ -6,6 +6,10 @@ import com.dbConnectivity.dbConnectivity.entities.User;
 import com.dbConnectivity.dbConnectivity.repository.UserRepository;
 import jakarta.transaction.Transactional;
 import lombok.AllArgsConstructor;
+import org.springframework.data.domain.Page;
+import org.springframework.data.domain.PageRequest;
+import org.springframework.data.domain.Pageable;
+import org.springframework.data.domain.Sort;
 import org.springframework.stereotype.Service;
 
 import java.util.ArrayList;
@@ -30,6 +34,17 @@ public class UserService {
         for (User user : users) {
             userDtoList.add(new UserDto(user.getId(), user.getName(), user.getEmail()));
         }
+        return userDtoList;
+    }
+
+    public List<UserDto> getAllUserPaginated(int page, int pageSize, String direction, String sortBy) {
+        Sort sort;
+        sort = direction.equalsIgnoreCase("asc") ? Sort.by(sortBy).ascending() : Sort.by(sortBy).descending();
+        Pageable pageable = PageRequest.of(page, pageSize, sort);
+        Page<User> users = userRepository.findAll(pageable);
+
+        List<UserDto> userDtoList = new ArrayList<>();
+        users.forEach(u -> userDtoList.add(new UserDto(u.getId(), u.getName(), u.getEmail())));
         return userDtoList;
     }
 

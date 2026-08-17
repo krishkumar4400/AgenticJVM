@@ -1,4 +1,7 @@
 package com.krish.Perplexity.repositories;
 
-public interface UserRepository {
+import com.krish.Perplexity.entities.UserEntity;
+import org.springframework.data.jpa.repository.JpaRepository;
+
+public interface UserRepository extends JpaRepository<UserEntity, String> {
 }

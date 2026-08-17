@@ -310,3 +310,86 @@ step 4: spring data jpa
 ```sh
 docker run --name postgres-container -e POSTGRES_USER=postgres -e POSTGRES_PASSWORD=pass -e POSTGRES_DB=testdb -p 5432:5432 -d postgres
 ```
+
+## Query Methods in JPA
+
+> spring data jpa can generate queries just from method names.
+
+```shell
+List<User> findByName(String name);
+
+List<User> findByNameAndEmail(String name, String email);
+
+List<User> findByNameContaining(String keyword);
+```
+
+what happens:
+
+Spring parses method -> generate SQL.
+
+Limitation
+
+- complex queries -> not possible
+Long method name
+
+## @Query(custom JPQL)
+
+> when derived queries are not enough, we write JPQL.
+
+@Query("SELECT u FROM u WHERE u.name= :name")
+List<User> findUserByName(@Param("name") String name)
+
+JPQL                SQL
+
+- uses entity       uses table
+- uses fields       uses columns
+
+Example:
+
+SELECT u FROM User u;
+
+Not:
+
+SELECT * FROM users;
+
+> JPQL works in objects, not tables
+
+## Native Query
+
+> Sometimes JPQL is not enough - then we use native SQL.
+
+@Query(value = "SELECT * FROM users WHERE name=?1", nativeQuery=true)
+List<User> findByNameNative(String name);
+
+when to use:
+
+- complex joins
+- DB-specific features
+- performance tuning
+
+downside:
+
+- DB dependent
+- not portable
+
+## Modifying Query
+
+> for update/delete queries, we use @Modifying.
+
+@Modifying
+@Transactional
+@Query("UPDATE User u SET u.name=:name WHERE u.id = :id")
+int updateUserName(@Param("id") Long id, @Param("name") String name);
+
+why needed:
+
+- JPQL is SELECT by default
+
+Important
+
+- must use @Transactional
+- must use @Modifying
+
+Important Line
+
+"without @Modifying, update queries will fail."

@@ -1,4 +1,9 @@
-FROM ubuntu:latest
-LABEL authors="krish"
+FROM openjdk:22-jdk
 
-ENTRYPOINT ["top", "-b"]
+WORKDIR /home/app
+
+ADD target/spring-app.jar .
+
+EXPOSE 8080
+
+ENTRYPOINT ["java", "-jar", "spring-app.jar"]
