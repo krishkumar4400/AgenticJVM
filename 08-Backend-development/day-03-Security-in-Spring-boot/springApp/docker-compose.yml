@@ -1,0 +1,37 @@
+version: "3.8"
+
+
+services:
+  postgres:
+    image: postgres:17
+    container_name: postgres_container
+
+    environment:
+      POSTGRES_USER: krish
+      POSTGRES_PASSWORD: krish123
+      POSTGRES_DB: springdb
+
+    ports:
+      - "5433:5432"
+
+    networks:
+      - spring-net
+
+  spring-app:
+    build: .
+    container_name: spring_app
+    depends_on:
+      - postgres
+
+    environment:
+      SPRING_DATASOURCE_URL: jdbc:postgresql://postgres:5432/springdb
+      SPRING_DATASOURCE_USERNAME: krish
+      SPRING_DATASOURCE_PASSWORD: krish123
+
+    ports:
+      - "8080:8080"
+    networks:
+      - spring-net
+
+networks:
+  spring-net:
