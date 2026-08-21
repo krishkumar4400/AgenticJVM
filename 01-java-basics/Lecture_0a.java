@@ -8,7 +8,7 @@ class Demo {
     }
 }
 
-public class Lecture_05 {
+public class Lecture_0a {
     public static void main(String[] args) {
         Demo d1 = new Demo();
         Demo d2 = new Demo();
