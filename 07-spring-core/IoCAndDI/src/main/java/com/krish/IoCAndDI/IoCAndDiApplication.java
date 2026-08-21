@@ -24,6 +24,8 @@ public class IoCAndDiApplication {
         Car car1 = context.getBean(Car.class);
         car1.drive();
         car1.stop();
+
+
 	}
 
 }
