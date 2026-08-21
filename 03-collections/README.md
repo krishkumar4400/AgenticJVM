@@ -12,11 +12,11 @@
         - Stack
         - Vector
 
-    b. Set
-        - HahsSet
-        - TreeSet
+    b. Set (LIFO)
+        - HahsSet => O(1)
+        - TreeSet => O(log N)
 
-    c. Queue
+    c. Queue (FIFO)
         - ArrayDeque
         - LinkedList
         - PriorityQueue
