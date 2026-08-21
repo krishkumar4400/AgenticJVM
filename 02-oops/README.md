@@ -50,3 +50,4 @@ OOP is ideal for large-scale applications because it promotes modularity, where 
 Additionally, OOP ensures scalability by allowing new features to be added with minimal disruption and provides security by encapsulating sensitive data within objects.
 
 These features make OOP well-suited for building and maintaining large, complex systems.
+
