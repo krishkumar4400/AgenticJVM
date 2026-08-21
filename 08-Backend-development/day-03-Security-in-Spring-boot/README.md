@@ -108,3 +108,26 @@ better but:
 step1: create custm exception
 step2: throw exception in service
 step3: create global handler
+
+---
+
+### convert maven project to spring project
+
+- create new package and class
+- google: maven repository (for dependencies)
+- resource: applicationBeanContext.xml
+- search: xml schema based configuration spring (copy and paste configuration)
+
+### Review
+
+1. basics of web
+2. spring framework
+3. coupling
+4. configurations
+5. DI and IOC
+6. XML and Annotations
+
+7. Explicit Bean Configuration
+8. No embedded server
+9. component scanning
+10. Boilerplate code
